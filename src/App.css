@@ -1,0 +1,70 @@
+.scrollable-tab-container{
+    max-width: 500px;
+    margin: 16px auto;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+.scrollable-tab-container  svg{
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    cursor: pointer;
+    color: red;
+    /* display: none; */
+}
+.scrollable-tab-container ul {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+    padding: 12px 24px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+.scrollable-tab-container ul::-webkit-scrollbar{
+    display: none;
+}
+.hidden {
+    display: none;
+  }
+.scrollable-tab-container a{
+    text-decoration: none;
+    color: #fff;
+    background:#333;
+    padding: 4px 24px;
+    display: inline-block;
+    border-radius: 4px;
+    user-select: none;
+    white-space: nowrap;
+}
+.scrollable-tab-container a.active{
+    background: #fff;
+    color: black;
+}
+.scrollable-tab-container .left-arrow ,
+.scrollable-tab-container .right-arrow{
+    position: absolute;
+    height: 100%;
+    width: 110px;
+    top: 0;
+    align-items: center;
+    display: none;
+    /* padding: 0 10px; */
+}
+.scrollable-tab-container .right-arrow{
+    right: 0;
+    justify-content: flex-end;
+    background: linear-gradient(to left, #000 40%, transparent);
+}
+.scrollable-tab-container .left-arrow{
+    background: linear-gradient(to right, #000 30%, transparent);
+
+}
+
+.scrollable-tab-container .right-arrow.active,
+.scrollable-tab-container .left-arrow.active
+{
+    display: flex;
+}
